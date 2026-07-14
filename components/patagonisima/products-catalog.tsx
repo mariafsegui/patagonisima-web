@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useMemo, useState } from "react"
 import { ArrowUpRight } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
-import { catalog, formatPrice, WHATSAPP_PHONE, type ProductCategory } from "@/lib/products"
+import { catalog, WHATSAPP_PHONE, type ProductCategory } from "@/lib/products"
 
 type Filter = "all" | ProductCategory
 
@@ -60,7 +60,7 @@ export function ProductsCatalog() {
           {filtered.map((product) => {
             const name = getName(product.category, product.srcIndex)
             const description = getDescription(product.category, product.srcIndex)
-            const waMessage = `${t.shop.whatsappMessage} ${name} (${formatPrice(product.price)})`
+            const waMessage = `${t.shop.whatsappMessage} ${name}`
             const waUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(waMessage)}`
 
             return (
@@ -102,10 +102,7 @@ export function ProductsCatalog() {
                     {description}
                   </p>
 
-                  <div className="flex items-center justify-between border-t border-primary/10 pt-5">
-                    <span className="font-serif text-2xl text-primary">
-                      {formatPrice(product.price)}
-                    </span>
+                  <div className="flex items-center justify-end border-t border-primary/10 pt-5">
                     <a
                       href={waUrl}
                       target="_blank"
