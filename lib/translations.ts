@@ -186,7 +186,7 @@ export const translations = {
       buy: "Consultar por WhatsApp",
       viewDetail: "Ver detalle",
       new: "NUEVO",
-      note: "Precios de referencia. Consultá disponibilidad y envíos por WhatsApp.",
+      note: "Consultá disponibilidad y envíos por WhatsApp.",
       whatsappMessage: "Hola! Me interesa el producto",
     },
     // Page heroes
@@ -401,7 +401,7 @@ export const translations = {
       buy: "Ask on WhatsApp",
       viewDetail: "View detail",
       new: "NEW",
-      note: "Reference prices. Check availability and shipping on WhatsApp.",
+      note: "Check availability and shipping on WhatsApp.",
       whatsappMessage: "Hi! I'm interested in the product",
     },
     // Page heroes
